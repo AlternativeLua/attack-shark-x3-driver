@@ -1,0 +1,4 @@
+# Attack Shark X3: wired (1d57:fa61) and its 2.4G dongle (1d57:fa60).
+# Grants the logged-in user access to the mouse's hidraw nodes.
+# Must sort before 73-seat-late.rules for the uaccess tag to take effect.
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1d57", ATTRS{idProduct}=="fa60|fa61", TAG+="uaccess"
